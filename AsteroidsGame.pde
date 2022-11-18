@@ -1,6 +1,6 @@
-Star [] galaxy = new Star [700];
-Spaceship ward = new Spaceship ();
-Asteroid [] field= new Asteroid [20];
+public Star [] galaxy = new Star [700];
+public Spaceship ward = new Spaceship ();
+public Asteroid [] field= new Asteroid [20];
 
 public void setup(){
   size(1000,1000);
