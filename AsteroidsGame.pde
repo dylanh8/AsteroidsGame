@@ -19,10 +19,7 @@ public void draw(){
   for(int i = 0; i<galaxy.length; i++){
     galaxy[i].show();
   }
-   for(int i=0; i<field.length; i++){
-    field[i].show();
-    field[i].move();
-  }
+  
   ward.show();
   ward.move();
   if(keyPressed){
