@@ -91,6 +91,10 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
   myYspeed=n;
   }
   
+    public void setDirection(double n){
+  myPointDirection=n;
+  }
+  
   
   
   
