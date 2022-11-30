@@ -22,28 +22,7 @@ public void draw(){
   
   ward.show();
   ward.move();
-  if(keyPressed){
-     if(key=='w'){
-        ward.accelerate(0.1);
-      }
-      if(key=='s'){
-        ward.accelerate(-0.1);
-      }
-      if(key=='a'){
-        ward.myPointDirection+=2;
-      }
-      if(key=='d'){
-        ward.myPointDirection-=2;
-      }
-      if(key==' '){
-        
-        ward.myXspeed=0;
-        ward.myYspeed=0;
-        ward.myCenterX=(int)(Math.random()*1000);
-        ward.myCenterY=(int)(Math.random()*1000);
-        ward.myPointDirection=((int)Math.random()*360);
- 
-      }
+  ward.hyperspacecheck();
   }
  
 } 
