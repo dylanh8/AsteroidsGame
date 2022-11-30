@@ -22,8 +22,7 @@ public void draw(){
   
   ward.show();
   ward.move();
- 
-     if(keyPressed){
+  if(keyPressed){
      if(key=='w'){
         ward.accelerate(0.1);
       }
@@ -38,11 +37,11 @@ public void draw(){
       }
       if(key==' '){
         
-        ward.myXspeed=0;
-        ward.myYspeed=0;
-        ward.myCenterX=(int)(Math.random()*1000);
-        ward.myCenterY=(int)(Math.random()*1000);
-        ward.myPointDirection=((int)Math.random()*360);
+        ward.setXSpeed(0);
+        ward.setYSpeed(0);
+        ward.setXCenter((int)(Math.random()*1000));
+        ward.setYCenter((int)(Math.random()*1000));
+        ward.setDirection((int)Math.random()*360);
  
       }
   }
