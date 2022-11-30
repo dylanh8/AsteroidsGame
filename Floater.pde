@@ -73,4 +73,34 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
   }   
+  
+  
+  public void setXCenter(double n){
+  myCenterX=n;
+  }
+  
+   public void setYCenter(double n){
+  myCenterY=n;
+  }
+  
+  public void setXSpeed(double n){
+  myXspeed=n;
+  }
+  
+   public void setYSpeed(double n){
+  myYspeed=n;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 } 
