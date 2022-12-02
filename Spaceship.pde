@@ -1,7 +1,7 @@
 public class Spaceship extends Floater  {  
     Spaceship(){
       corners=4;
-      myColor=255;
+     r=g=b=255;
       myCenterX=350;
       myCenterY=350;
       myXspeed=0;
@@ -16,10 +16,10 @@ public class Spaceship extends Floater  {
     
     }
     
-    
+    public void setCorners(){
+      corners=0;
+    }
     
     
      
     }
-    
-    
