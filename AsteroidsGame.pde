@@ -73,12 +73,11 @@ public void draw(){
       }
       if(key==' '){
         
-        ward.setXSpeed(0);
-        ward.setYSpeed(0);
-        ward.setXCenter((int)(Math.random()*1000));
-        ward.setYCenter((int)(Math.random()*1000));
-        ward.setDirection((int)Math.random()*360);
- 
+         ward.setXSpeed(0);
+         ward.setYSpeed(0);
+         ward.setXCenter((int)(Math.random()*1000));
+         ward.setYCenter((int)(Math.random()*1000));
+         ward.setDirection((int)Math.random()*360);
       }
   }
 
