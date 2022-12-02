@@ -132,7 +132,9 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
     
     return b;
   }
-  
+    public double getDirection(){
+    return myPointDirection;
+  }
   
   
   
