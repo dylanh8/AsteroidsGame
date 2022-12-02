@@ -3,7 +3,7 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
   protected int corners;  //the number of corners, a triangular floater has 3   
   protected int[] xCorners;   
   protected int[] yCorners;   
-  protected int myColor;   
+  protected int r, g, b;   
   protected double myCenterX, myCenterY; //holds center coordinates   
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions   
   protected double myPointDirection; //holds current direction the ship is pointing in degrees    
@@ -49,8 +49,8 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
   }   
   public void show ()  //Draws the floater at the current position  
   {             
-    fill(myColor);   
-    stroke(myColor);    
+    fill(r, g, b);   
+    stroke(r, g, b);    
     
     //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
@@ -97,6 +97,41 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
   
   
   
+  public double getXCenter(){
+    return myCenterX;
+    
+  }
+  public double getYCenter(){
+    return myCenterY;
+    
+  }
+  public double getXSpeed(){
+    return myXspeed;
+    
+  }
+   public double getYSpeed(){
+    return myYspeed;
+    
+  }
+  public void setR(int n){
+    r=n;
+  }
+   public void setG(int n){
+    g=n;
+  }
+   public void setB(int n){
+    b=n;
+  }
+  public int getR(){
+    return r;
+  }
+  public int getG(){
+    return g;
+  }
+  public int getB(){
+    
+    return b;
+  }
   
   
   
@@ -107,4 +142,7 @@ public class Floater //Do NOT modify the Floater class! Make changes in the Spac
   
   
   
-} 
+  
+}
+
+
