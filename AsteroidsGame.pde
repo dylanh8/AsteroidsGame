@@ -69,7 +69,7 @@ public void draw(){
         ward.setDirection(ward.getDirection()+2);
       }
       if(key=='d'){
-        wward.setDirection(ward.getDirection()-2);
+        ward.setDirection(ward.getDirection()-2);
       }
       if(key==' '){
         
