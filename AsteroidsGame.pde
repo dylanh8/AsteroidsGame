@@ -3,6 +3,9 @@ public Star [] galaxy = new Star [700];
 public Spaceship ward = new Spaceship ();
 ArrayList <Asteroid> field = new ArrayList <Asteroid> ();
 int fieldlength=40;
+Bullet bill =  new Bullet(ward);
+
+ArrayList <Bullet> billy = new ArrayList <Bullet> ();
 
 
 public void setup(){
@@ -13,7 +16,10 @@ public void setup(){
   for(int i=0; i<fieldlength; i++){
     field.add(new Asteroid());
   }
-
+  for(int i=0; i<billy.size(); i++){
+    billy.get(i).show();
+    billy.get(i).move();
+  }
  
  
  
@@ -23,17 +29,45 @@ public void setup(){
 
 public void draw(){
   background(0);
+ 
+  
+   
+  
   for(int i = 0; i<galaxy.length; i++){
     galaxy[i].show();
   }
-  for(int i=0; i<fieldlength; i++){
-
-
+  
+  for(int i=0; i<billy.size(); i++){
+    billy.get(i).show();
+    billy.get(i).move();
+    
    
+      
+
+      
+  }
+  
+   
+    for(int p=0; p<billy.size();p++){
+      for(int i=0; i<fieldlength; i++){
+         if(dist((float)billy.get(p).getXCenter(), (float)billy.get(p).getYCenter(), (float)field.get(i).getXCenter(), (float)field.get(i).getYCenter())<30){
+      
+      field.remove(field.get(i));
+      fieldlength--;
+      
+      
+      
+      }
+      }
+     
+      
+    }
+  for(int i=0; i<fieldlength; i++){
     field.get(i).show();
     field.get(i).accelerate(Math.random()*1-0.5);
     field.get(i).move();
     
+   
     
     if(dist((float)ward.getXCenter(), (float)ward.getYCenter(), (float)field.get(i).getXCenter(), (float)field.get(i).getYCenter())<30){
       
@@ -55,6 +89,9 @@ public void draw(){
      ward.setCorners();
   }
   }
+ 
+ 
+
   
   ward.show();
   ward.move();
@@ -70,6 +107,9 @@ public void draw(){
       }
       if(key=='d'){
         ward.setDirection(ward.getDirection()-2);
+      }
+      if(key=='r'){
+        billy.add(new Bullet(ward));
       }
       if(key==' '){
         
